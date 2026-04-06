@@ -61,6 +61,13 @@ export default {
       );
     }
 
+		if (url.pathname === "/test") {
+      return new Response(
+        JSON.stringify("test"),
+        { headers }
+      );
+    }
+
     return new Response(
       JSON.stringify({ error: "Not found" }),
       { status: 404, headers }
